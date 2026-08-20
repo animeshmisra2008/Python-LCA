@@ -4,7 +4,7 @@ def main():
     print("2- Lists")
     print("3- Tuples")
     print("4- Triangle")
-    program = input("Which program would you like to run? (enter the number)").strip()
+    program = input("Which program would you like to run? (enter the number) ").strip()
 
     if program == "1":
         maxwork()
