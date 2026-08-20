@@ -3,7 +3,8 @@ def main():
     print("1- Maximum of three numbers")
     print("2- Lists")
     print("3- Tuples")
-    program = input("Which program would you like to run? ")
+    print("4- Triangle")
+    program = input("Which program would you like to run? (enter the number)").strip()
 
     if program == "1":
         maxwork()
@@ -11,8 +12,11 @@ def main():
         listwork()
     elif program == "3":
         tuplework()
+    elif program == "4":
+        trianglework()
     else:
         print("Invalid input. Please select 1, 2, or 3.")
+
 
 def tuplework():
 
@@ -56,6 +60,7 @@ def tuplework():
     print(f"Backup Courses: {backup_courses}")
     print(f"Combined Courses: {combined_courses}")
 
+
 def maxwork():
 
     print("We will find the largest of three numbers")
@@ -73,6 +78,7 @@ def maxwork():
             largest = number
 
     print(f"The greatest number is {largest}")
+
 
 def listwork():
 
@@ -112,5 +118,22 @@ def listwork():
     print(f"Backup list: {backup_students}")
 
     print(f"Combined Participants List: {all_participants}")
+
+
+def trianglework():
+    
+    s1= int(input("Enter the length of the first side: "))
+    s2= int(input("Enter the length of the second side: "))
+    s3= int(input("Enter the length of the third side: "))
+    
+    if s1 == s2 == s3:
+        print ("It is an Equilateral Triangle")
+    
+    elif s1 == s2 or s2 == s3 or s1 == s3:
+        print ("It is an Isosceles Triangle")
+        
+    else:
+        print ("It is a Scalene Triangle")
+
 
 main()
